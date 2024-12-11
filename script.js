@@ -68,19 +68,19 @@ function setBackgroundAndGreeting() {
 
     if (currentTime >= 5 && currentTime < 12) {
         greeting = "Good Morning! 🌞";
-        food = "How about some vegetarian pancakes or a smoothie bowl?";
+        food = "How about a traditional *Aloo Paratha* with curd, or some *Masala Dosa* with chutney?";
         quoteElement.textContent = quotes[0];
     } else if (currentTime >= 12 && currentTime < 17) {
         greeting = "Good Afternoon! 🌤";
-        food = "How about a light vegetarian sandwich or a fresh veggie salad?";
+        food = "A delicious *Paneer Tikka* or a filling *Chole Bhature* could make for a hearty lunch!";
         quoteElement.textContent = quotes[1];
     } else if (currentTime >= 17 && currentTime < 21) {
         greeting = "Good Evening! 🌇";
-        food = "How about a healthy vegetarian pasta or a hearty veggie stew?";
+        food = "How about a warm *Vegetable Biryani* or a comforting *Aloo Gobi* for dinner?";
         quoteElement.textContent = quotes[2];
     } else {
         greeting = "Good Night! 🌌";
-        food = "Maybe a warm bowl of vegetarian soup or light fruit snacks?";
+        food = "Maybe a light snack like *Vegetable Soup* or *Methi Thepla* before you go to bed?";
         quoteElement.textContent = quotes[3];
     }
 
@@ -107,9 +107,9 @@ function showFoodSelectionPage() {
     const dishes = [
         { name: "Paneer Tikka", youtubeUrl: "https://www.youtube.com/results?search_query=paneer+tikka" },
         { name: "Chole Bhature", youtubeUrl: "https://www.youtube.com/results?search_query=chole+bhature" },
-        { name: "Biryani", youtubeUrl: "https://www.youtube.com/results?search_query=vegetarian+biryani" },
+        { name: "Vegetable Biryani", youtubeUrl: "https://www.youtube.com/results?search_query=vegetarian+biryani" },
         { name: "Aloo Gobi", youtubeUrl: "https://www.youtube.com/results?search_query=aloo+gobi" },
-        { name: "Dosa", youtubeUrl: "https://www.youtube.com/results?search_query=dosa" },
+        { name: "Masala Dosa", youtubeUrl: "https://www.youtube.com/results?search_query=masala+dosa" },
         { name: "Samosa", youtubeUrl: "https://www.youtube.com/results?search_query=samosa" },
         { name: "Spring Rolls", youtubeUrl: "https://www.youtube.com/results?search_query=vegetarian+spring+rolls" },
         { name: "Fried Rice", youtubeUrl: "https://www.youtube.com/results?search_query=vegetarian+fried+rice" },
