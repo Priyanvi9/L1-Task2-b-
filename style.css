@@ -1,0 +1,225 @@
+/* Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #34495e;  /* Slightly muted dark background for a professional look */
+    height: 100vh;
+    color: white;
+    transition: background-color 1.5s ease-in-out;
+  }
+  
+  /* Container Styles */
+  .container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #2c3e50;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards, slideIn 2s ease-out forwards;
+  }
+  
+  /* Button Styles */
+  .btn {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: white;
+    background: #1abc9c;  /* Elegant teal button color */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+    background: #16a085;  /* Lighter teal on hover */
+  }
+  
+  /* Quote Styling */
+  .quote {
+    font-size: 1rem;
+    color: #95a5a6;  /* Slightly darker gray for better visibility */
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+    animation-delay: 0.5s;
+  }
+  
+  /* Food Selection Page */
+  .food-selection-page {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1s;
+  }
+  
+  .food-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .food-button {
+    padding: 14px;
+    background-color: #3498db;  /* Elegant blue for food buttons */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    animation: fadeInButton 1s ease-out forwards;
+  }
+  
+  .food-button:nth-child(even) {
+    animation-delay: 0.3s;
+  }
+  
+  .food-button:nth-child(odd) {
+    animation-delay: 0.5s;
+  }
+  
+  .food-button:hover {
+    transform: scale(1.05);
+    background-color: #2980b9;  /* Darker blue on hover */
+  }
+  
+  /* Dish Page */
+  .dish-page {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .dish-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .recipe {
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  .youtube-video {
+    margin-top: 20px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInButton {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translate(100%, -50%); /* Start from right */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%); /* End at center */
+    }
+  }
+  
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translate(-100%, -50%); /* Start from left */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%); /* End at center */
+    }
+  }
+  
+  @keyframes slideInTop {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, -100%); /* Start from top */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%); /* End at center */
+    }
+  }
+  
+  @keyframes slideInBottom {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 100%); /* Start from bottom */
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%, -50%); /* End at center */
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  
+    .food-button {
+      padding: 12px;
+      font-size: 1rem;
+    }
+  
+    .quote {
+      font-size: 0.9rem;
+    }
+  }
+  
